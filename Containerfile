@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-kinoite:43
+FROM quay.io/fedora/fedora-kinoite:44
 
 LABEL org.opencontainers.image.title="Fedora Kinokite"
 LABEL org.opencontainers.image.description="Customized image of Fedora Kinoite"
