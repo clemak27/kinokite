@@ -61,7 +61,7 @@ mv /tmp/krohnkite/* "/usr/share/kwin/scripts/krohnkite"
 # plasma-panel-colorizer
 
 # renovate: datasource=github-tags depName=luisbocanegra/plasma-panel-colorizer versioning=loose
-panel_colorizer_version=5.2.1
+panel_colorizer_version=5.3.0
 panel_colorizer_plasmoid=plasmoid-panel-colorizer-v$panel_colorizer_version.plasmoid
 
 cd /tmp
