@@ -41,6 +41,12 @@ dnf -y install \
   wl-clipboard \
   zsh
 
+# flatpak
+
+mkdir -p /etc/flatpak/remotes.d/
+curl --retry 3 -Lo /etc/flatpak/remotes.d/flathub.flatpakrepo https://dl.flathub.org/repo/flathub.flatpakrepo
+mv -f /usr/lib/systemd/system/enable-flathub.service /usr/lib/systemd/system/flatpak-add-fedora-repos.service
+
 # podman
 
 mkdir -p /etc/containers
