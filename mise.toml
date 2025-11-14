@@ -20,3 +20,8 @@ shellcheck plasma.sh
 run = """
 docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
 """
+
+[tasks.build-image-deck]
+run = """
+docker build -t ${IMAGE_NAME}-deck:${IMAGE_TAG} -f ./Containerfile.deck .
+"""
