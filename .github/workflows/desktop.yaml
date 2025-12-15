@@ -67,6 +67,11 @@ jobs:
             org.opencontainers.image.licenses=MIT
             containers.bootc=1
 
+      - name: free space
+        run: |
+          cd /opt
+          find . -maxdepth 1 -mindepth 1 '!' -path ./containerd '!' -path ./actionarchivecache '!' -path ./runner '!' -path ./runner-cache -exec rm -rf '{}' ';'
+
       - name: build image
         id: build_image
         uses: redhat-actions/buildah-build@7a95fa7ee0f02d552a32753e7414641a04307056  # v2
