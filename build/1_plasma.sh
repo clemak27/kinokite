@@ -6,7 +6,7 @@ dnf -y install git cmake extra-cmake-modules gettext
 
 # klassy
 
-# renovate: datasource=github-tags depName=taj-ny/kwin-effects-forceblur versioning=loose
+# renovate: datasource=github-tags depName=paulmcauley/klassy versioning=loose
 klassy_version=6.4.breeze6.4.0
 
 cd /tmp
