@@ -18,10 +18,23 @@ shellcheck plasma.sh
 
 [tasks.build-image]
 run = """
-docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
+docker build -t ${IMAGE_NAME}:${IMAGE_TAG} . -f ./Containerfile.kinokite
 """
 
 [tasks.build-image-deck]
 run = """
-docker build -t ${IMAGE_NAME}-deck:${IMAGE_TAG} -f ./Containerfile.deck .
+docker build -t ${IMAGE_NAME}-deck:${IMAGE_TAG} . -f ./Containerfile.deck
+"""
+
+[tasks.build-image-dank]
+run = """
+docker build -t ghcr.io/clemak27/danklinux:${IMAGE_TAG} . -f ./Containerfile.dank
+"""
+
+[tasks.test-dank]
+run = """
+image="ghcr.io/clemak27/danklinux:latest"
+
+podman build -t ${image} . -f ./Containerfile.dank
+podman push ${image}
 """
