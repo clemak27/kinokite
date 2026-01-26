@@ -9,7 +9,7 @@ but feel free to use it as inspiration.
 Dotfiles and setup for user-specific changes are in my
 [linux_setup repo](https://github.com/clemak27/linux_setup).
 
-It currently builds 2 Images:
+It currently builds 3 Images:
 
 ### `kinokite`
 
@@ -23,6 +23,11 @@ hence the name of the image.
 ### `kinokite-deck`
 
 This is similar to `kinokite`, but based on `bazzite-deck`.
+
+### `dankfedora`
+
+A `bootc` image with [DMS](https://github.com/AvengeMedia/DankMaterialShell)
+and [niri](https://github.com/YaLTeR/niri), to play around with it.
 
 ## Usage
 

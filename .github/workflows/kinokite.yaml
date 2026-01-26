@@ -8,7 +8,10 @@ on:
     branches: ["main"]
     paths:
       - Containerfile.kinokite
-      - build/**
+      - build/00_base.sh
+      - build/01_kinokite.sh
+      - build/02_plasma.sh
+      - build/99_cleanup.sh
       - system/**
 
 env:
