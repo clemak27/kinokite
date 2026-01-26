@@ -25,3 +25,8 @@ docker build -t ${IMAGE_NAME}:${IMAGE_TAG} . -f ./Containerfile.kinokite
 run = """
 docker build -t ${IMAGE_NAME}-deck:${IMAGE_TAG} . -f ./Containerfile.deck
 """
+
+[tasks.build-image-dank]
+run = """
+docker build -t ghcr.io/clemak27/dankfedora:${IMAGE_TAG} . -f ./Containerfile.dank
+"""

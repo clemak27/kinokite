@@ -3,8 +3,9 @@
   "branchPrefix": "renovate/",
   "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
   "forkProcessing": "disabled",
-  "extends": [":semanticCommitScopeDisabled"],
   "commitMessageAction": "update",
+  "semanticCommits": "enabled",
+  "semanticCommitType": "fix",
   "regexManagers": [
     {
       "fileMatch": [".*\\.sh"],
@@ -23,7 +24,21 @@
         "minor",
         "patch"
       ],
-      "automerge": true
+      "automerge": true,
+      "semanticCommitScope": "mise"
+    },
+    {
+      "matchFileNames": [
+        "./build/02_plasma.sh"
+      ],
+      "semanticCommitScope": "plasma"
+    },
+    {
+      "matchFileNames": [
+        "./.github/**"
+      ],
+      "semanticCommitType": "ci",
+      "extends": [":semanticCommitScopeDisabled"]
     }
   ]
 }
