@@ -18,10 +18,10 @@ shellcheck plasma.sh
 
 [tasks.build-image]
 run = """
-docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
+docker build -t ${IMAGE_NAME}:${IMAGE_TAG} . -f ./Containerfile.kinokite
 """
 
 [tasks.build-image-deck]
 run = """
-docker build -t ${IMAGE_NAME}-deck:${IMAGE_TAG} -f ./Containerfile.deck .
+docker build -t ${IMAGE_NAME}-deck:${IMAGE_TAG} . -f ./Containerfile.deck
 """

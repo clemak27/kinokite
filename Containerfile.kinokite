@@ -14,8 +14,9 @@ RUN --mount=type=bind,from=ctx,src=/,dst=/ctx \
   --mount=type=cache,target=/var/cache \
   --mount=type=cache,target=/var/log \
   --mount=type=tmpfs,target=/tmp \
-  /ctx/0_base.sh && \
-  /ctx/1_plasma.sh && \
+  /ctx/00_base.sh && \
+  /ctx/01_kinoite.sh && \
+  /ctx/02_plasma.sh && \
   /ctx/99_cleanup.sh && \
   ostree container commit && \
   bootc container lint
