@@ -5,7 +5,6 @@
   "forkProcessing": "disabled",
   "commitMessageAction": "update",
   "semanticCommits": "enabled",
-  "semanticCommitType": "fix",
   "regexManagers": [
     {
       "fileMatch": [".*\\.sh"],
@@ -25,20 +24,24 @@
         "patch"
       ],
       "automerge": true,
-      "semanticCommitScope": "mise"
+      "semanticCommitScope": "mise",
+      "semanticCommitType": "fix"
     },
     {
       "matchFileNames": [
         "./build/02_plasma.sh"
       ],
-      "semanticCommitScope": "plasma"
+      "semanticCommitScope": "plasma",
+      "semanticCommitType": "fix"
     },
     {
       "matchFileNames": [
         "./.github/**"
       ],
       "semanticCommitType": "ci",
-      "extends": [":semanticCommitScopeDisabled"]
+      "extends": [
+        ":semanticCommitScopeDisabled"
+      ]
     }
   ]
 }
