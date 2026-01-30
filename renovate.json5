@@ -7,7 +7,9 @@
   "semanticCommits": "enabled",
   "regexManagers": [
     {
-      "fileMatch": [".*\\.sh"],
+      "fileMatch": [
+        ".*\\.sh"
+      ],
       // https://regex101.com/r/AxTOhn/1
       "matchStrings": [
         "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s\\S+?=(?<currentValue>\\S+)"
@@ -39,6 +41,17 @@
         ".github/**"
       ],
       "semanticCommitType": "ci",
+      "extends": [
+        ":semanticCommitScopeDisabled"
+      ]
+    },
+    {
+      "matchPackageNames": [
+        "quay.io/fedora/fedora-kinoite",
+        "quay.io/fedora/fedora-bootc"
+      ],
+      "groupName": "Fedora",
+      "semanticCommitType": "feat",
       "extends": [
         ":semanticCommitScopeDisabled"
       ]
