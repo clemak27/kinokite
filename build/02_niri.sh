@@ -16,14 +16,15 @@ dnf -y install \
   dms-greeter \
   dsearch \
   fpaste \
+  gcr \
   ghostty \
   glycin-thumbnailer \
   gnome-disk-utility \
   gnome-keyring \
   gnome-keyring-pam \
-  gcr \
   greetd \
   greetd-selinux \
+  kdeconnectd \
   matugen \
   nautilus \
   nautilus-python \
