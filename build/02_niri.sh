@@ -21,6 +21,7 @@ dnf -y install \
   gnome-disk-utility \
   gnome-keyring \
   gnome-keyring-pam \
+  gcr \
   greetd \
   greetd-selinux \
   matugen \
