@@ -29,14 +29,14 @@
     },
     {
       "matchFileNames": [
-        "./build/02_plasma.sh"
+        "build/02_plasma.sh"
       ],
       "semanticCommitScope": "plasma",
       "semanticCommitType": "fix"
     },
     {
       "matchFileNames": [
-        "./.github/**"
+        ".github/**"
       ],
       "semanticCommitType": "ci",
       "extends": [
